@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configure class="org.mortbay.jetty.webapp.WebAppContext">
+	<Set name="systemClasses">
+		<Array type="java.lang.String">
+
+			<!--
+				we copied these paths from jetty WebAppContext source code ...
+			-->
+			<Item>java.</Item>
+			<Item>javax.servlet.</Item>
+			<Item>javax.xml.</Item>
+			<Item>org.mortbay.</Item>
+			<Item>org.xml.</Item>
+			<Item>org.w3c.</Item>
+			<Item>org.apache.commons.logging.</Item>
+			<Item>org.apache.log4j.</Item>
+
+			<!-- and ... added slf4j -->
+			<Item>org.slf4j.</Item>
+			<Item>org.aspectj.</Item>
+
+			<!--
+				File to fix hosted mode bug We must promote slf4j to system classes,
+				otherwise gwt hosted mode will not allow loading them due to a
+				policy that don't allow server classes to be loaded from the outside
+				world (see gwt JettyLauncher source code).
+
+				http://osdir.com/ml/GoogleWebToolkit/2009-04/msg01034.html Issue :
+				http://code.google.com/p/google-web-toolkit/issues/detail?id=3496
+			-->
+
+		</Array>
+	</Set>
+</Configure>

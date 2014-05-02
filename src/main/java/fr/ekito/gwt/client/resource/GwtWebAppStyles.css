@@ -1,0 +1,70 @@
+.simpleText {
+	font-family: arial, sans-serif;
+	font-weight: bold;
+	font-size: 1em;
+	padding: 2px;
+}
+
+.todoblock {
+	position: relative;
+	float: center;
+	margin: 20px;
+	border-radius: 10px;
+	background: none repeat scroll 0 0 #FAF9F5;
+	margin-left: auto;
+	padding: 20px;
+	margin-right: auto;
+	width: 50%;
+}
+
+.todoPanel {
+	position: relative;
+	float: center;
+	margin: 20px;
+	border-radius: 10px;
+	background: none repeat scroll 0 0 #E5ECF9;
+	margin-left: auto;
+	padding: 20px;
+	margin-right: auto;
+	width: 50%;
+}
+
+.todoText {
+	font-family: arial, sans-serif;
+	font-size: 15px;
+	height: 40px;
+	margin: 7px 7px;
+	padding: 0 5px;
+	color: #666666;
+	min-width: 48px;
+	text-align: center;
+}
+
+.sendButton {
+	font-family: arial, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	height: 40px;
+	margin: 7px 7px;
+	padding: 0 5px;
+	background-color: #F5F5F5;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 3px;
+	color: #666666;
+	cursor: pointer;
+	min-width: 48px;
+	text-align: center;
+}
+
+.sendButton:hover {
+	font-family: arial, sans-serif;
+	background-color: #F8F8F8;
+	border: 1px solid #C6C6C6;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	color: #333333;
+}
+
+.sendButton:focus {
+	border: 1px solid #4D90FE;
+	outline: medium none;
+}

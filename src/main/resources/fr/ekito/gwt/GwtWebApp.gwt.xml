@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='gwtwebapp'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+
+	<inherits name='com.google.gwt.i18n.I18N' />
+
+	<inherits name="com.google.gwt.logging.Logging" />
+	<set-property name="gwt.logging.consoleHandler" value="DISABLED" />
+	<set-property name="gwt.logging.developmentModeHandler"
+		value="ENABLED" />
+	<set-property name="gwt.logging.popupHandler" value="DISABLED" />
+
+	<inherits name="com.google.gwt.resources.Resources" />
+
+	<!-- Gin -->
+	<inherits name="com.google.gwt.inject.Inject" />
+
+	<!-- French language, independent of country -->
+	<extend-property name="locale" values="fr" />
+
+	<!-- English language, independent of country -->
+	<extend-property name="locale" values="en" />
+
+	<set-property-fallback name="locale" value="fr" />
+
+	<!-- Inherit the default GWT style sheet. You can change -->
+	<!-- the theme of your GWT application by uncommenting -->
+	<!-- any one of the following lines. -->
+	<inherits name='com.google.gwt.user.theme.clean.Clean' />
+
+	<!-- Other module inherits -->
+
+	<!-- Specify the app entry point class. -->
+	<entry-point class='fr.ekito.gwt.client.GwtWebApp' />
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='common' />
+
+</module>
