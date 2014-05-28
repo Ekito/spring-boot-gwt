@@ -30,7 +30,6 @@ public class TodoController {
 
 	@RequestMapping(method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
-    @ResponseBody
     public List<Todo> all() {
         return todoList;
     }
