@@ -9,7 +9,7 @@
 	<set-property name="gwt.logging.consoleHandler" value="DISABLED" />
 	<set-property name="gwt.logging.developmentModeHandler"
 		value="ENABLED" />
-	<set-property name="gwt.logging.popupHandler" value="DISABLED" />
+	<!--<set-property name="gwt.logging.popupHandler" value="DISABLED" />-->
 
 	<inherits name="com.google.gwt.resources.Resources" />
 

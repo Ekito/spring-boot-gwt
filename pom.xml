@@ -13,16 +13,17 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.0.1.RELEASE</version>
+		<version>1.4.1.RELEASE</version>
 	</parent>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<start-class>fr.ekito.gwt.server.ServerApplication</start-class>
-		<java.version>1.7</java.version>
+		<java.version>1.8</java.version>
+        <jetty.version>9.2.17.v20160517</jetty.version>
 
-		<gwtVersion>2.6.0</gwtVersion>
+		<gwtVersion>2.8.0</gwtVersion>
 		<googleGin>2.1.2</googleGin>
 		<outputFolder>${project.build.directory}/${artifactId}</outputFolder>
 	</properties>
@@ -31,6 +32,16 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jetty</artifactId>
 		</dependency>
 
 		<dependency>
@@ -62,7 +73,7 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>gwt-maven-plugin</artifactId>
-				<version>2.6.0</version>
+				<version>${gwtVersion}</version>
 				<executions>
 					<execution>
 						<goals>
