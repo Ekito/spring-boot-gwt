@@ -1,7 +1,7 @@
 spring-boot-gwt
 ===============
 
-A quickstart spring boot gwt application
+A quickstart spring boot gwt application (Spring Boot 1.4.1, GWT 2.8)
 
 ## GWT Developer Console
 
